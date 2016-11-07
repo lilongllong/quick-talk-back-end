@@ -7,4 +7,8 @@ $(document).ready(() => {
         console.log("接受到消息结果");
         console.log(data);
     });
+    socket.emit("callback test", "callback message" , (data) => {
+
+        console.log("接受callback测试数据: " + data);
+    });
 });
