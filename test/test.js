@@ -1,7 +1,7 @@
 const socket = io.connect('http://localhost:8080/mx-qq');
 
 $(document).ready(() => {
-    socket.emit("post-message", {time: "2016 test", id: "test", message: "it is  a test", location: "Nanjing"});
+    socket.emit("post-message", {time: "2016 test", id: "test", message: "it is  a test", location: "Nanjing", distance: 200});
     socket.emit("get-message", "Nanjing");
     socket.on("message result", (data) => {
         console.log("接受到消息结果");
